@@ -18,7 +18,7 @@ Dự án sử dụng dữ liệu dân số Việt Nam để xây dựng một da
 
 -   `Python`: Ngôn ngữ lập trình chính.
 
--   `Anaconda` (miniconda): Môi trường thực thi.
+-   `Anaconda (miniconda)`: Môi trường thực thi.
 
 -   `Cursor` hoặc `Windsurf`: Công cụ để **Vibe coding**.
 
@@ -35,33 +35,29 @@ Dự án được chia thành các giai đoạn Prompt cụ thể để bạn lu
 
 -   **Prompt Key:** Yêu cầu AI đọc cấu trúc file, sử dụng thư viện (như Plotly hoặc Matplotlib) để vẽ biểu đồ diện tích (area chart) thể hiện tỷ trọng 3 nhóm tuổi: 0-14, 15-64, và 65+.
 
-### 2\. Interactive Simulation (Sidebar)
+### 2\. Visualization & Time Filter (Bộ lọc thời gian)
 
--   **Mục tiêu:** Biến biểu đồ tĩnh thành một công cụ giả thuyết.
+-   **Mục tiêu:** Đọc file CSV và hiển thị dữ liệu linh hoạt.
 
--   **Prompt Key:** Yêu cầu AI thêm một thanh **Sidebar** (trong Streamlit/Dash). Khi thay đổi biến số **Tỉ lệ sinh (Total Fertility Rate)**, các đường dữ liệu dự báo dân số trong tương lai phải tự động tính toán và cập nhật theo.
+-   **Prompt Key:** Yêu cầu AI tạo một **thanh trượt (Range Slider)** cho phép chọn khoảng năm (ví dụ: 1950 - 2100). Biểu đồ phải tự động thu hẹp hoặc mở rộng khoảng hiển thị dựa trên giá trị của thanh trượt này, bắt đầu từ năm đầu tiên đến năm cuối cùng có trong bộ dữ liệu.
+
 
 ### 3\. Analytical Reasoning
 
--   **Mục tiêu:** Tìm ra "điểm chạm" của dân số vàng.
+-   **Mục tiêu:** Tìm ra "thời điểm vàng" của dân số.
 
--   **Prompt Key:** Sử dụng AI như một nhà phân tích dữ liệu để trả lời câu hỏi: *"Với tỉ lệ sinh bao nhiêu thì Việt Nam giữ được tỷ trọng dân số vàng (nhóm 15-64 chiếm ưu thế) lâu nhất?"*
+-   **Yêu cầu:** Từ biểu đồ đã vẽ, lựa chọn khoảng dữ liệu mình chú ý. Sử dụng AI như một nhà phân tích dữ liệu để: *"Bình luận về dân số Việt Nam trong giai đoạn đã lựa chọn?"*
 
 ### 4\. Automated Reporting & Presentation
 
--   **Mục tiêu:** Chuyển đổi dữ liệu thành tri thức.
+-   **Mục tiêu:** Xây dựng báo cáo phân tích và đề xuất giải pháp chính sách.
 
--   **Prompt Key:** * Yêu cầu AI viết báo cáo phân tích hiện trạng và đề xuất giải pháp chính sách.
+-   **Yêu cầu:** Yêu cầu AI viết `dàn ý` báo cáo phân tích hiện trạng và đề xuất giải pháp chính sách. 
 
-    -   Prompt AI chuyển đổi nội dung báo cáo đó thành cấu trúc Slide chuyên nghiệp (Sử dụng định dạng Markdown hoặc tạo file PPTX).
+    -   Sử dụng công cụ AI (Kimi, Gamma,...)  chuyển đổi nội dung dàn ý báo cáo đó thành cấu trúc Slide chuyên nghiệp.
 
-* * * * *
+### 5\. Một số gợi ý
+-   **Dùng AI viết prompt:** Có thể dùng ChatGPT, Gemini để vuốt lại prompt cho đúng ý hơn
+-   **Dùng AI thiết kế giao diện:** Có thể dùng ChatGPT, Gemini để thiết kế giao diện đẹp hơn từ hình ảnh mẫu.
+-   **Dùng kết hợp nhiều công cụ AI** Có thể dùng mọi công cụ AI phù hợp.
 
-🎯 Mục tiêu học tập
--------------------
-
--   **Kỹ năng Prompting:** Cách mô tả logic nghiệp vụ phức tạp cho AI.
-
--   **Context Management:** Cách đưa dữ liệu và hình ảnh mẫu vào prompt để AI hiểu đúng ngữ cảnh.
-
--   **Iterative Development:** Tinh chỉnh code thông qua đối thoại để đạt được kết quả mong muốn.
